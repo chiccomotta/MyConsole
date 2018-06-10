@@ -16,7 +16,7 @@ namespace MyConsole
         public async Task StartTask()
         {
             // Instantiate the CancellationTokenSource.  
-            cts = new CancellationTokenSource();            ;
+            cts = new CancellationTokenSource();            
 
             try
             {
@@ -66,7 +66,8 @@ namespace MyConsole
                 // Retrieve the website contents from the HttpResponseMessage.  
                 byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
-                Console.WriteLine(String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length));
+                Console.WriteLine(
+                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n");
             }
         }
 
